@@ -1,0 +1,297 @@
+/* Alla sidor länkar till hit i <head> */
+
+
+body{
+	background-color:#e1e8ea;
+
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+	margin: 30px;
+}
+
+#startsida-rubrik{
+	color:#2e76c9;
+	letter-spacing: .05em;
+	text-shadow:
+			2px 2px 0px #F8A055,
+      2px 2px 0px #F8A055,
+			3px 3px 0px #F8A055;
+}
+
+#startsida-rubrik:hover{
+	color:white;
+}
+
+.row{
+	margin-top: 30px;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.col{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* LISTOR */
+
+ol {
+	text-align: center;
+	list-style-position:inside;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+/* MENY */
+
+.nav{
+	background-color: lightblue;
+}
+
+
+.navbar-inverse .navbar-brand{
+	color:black;
+}
+
+.navbar-inverse .navbar-nav li a{
+	color:black;
+}
+
+/* Bilder */
+
+
+.bilder{
+  margin: 30px;
+
+}
+
+.bildKarusell{
+  margin-top: 30px;
+	width: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+}
+
+.bildKarusell img{
+  width: 400px;
+  height: 400px;
+}
+
+.btn-default{
+	background-color: #398272;
+	color:white;
+}
+
+.instructions{
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* KNAPPAR */
+.btn{
+  position: relative;
+  border: none;
+  font-size: 20px;
+  overflow: auto;
+}
+
+.bildKarusell:hover .btn{
+  opacity: 0.5;
+}
+
+.btnLeft{
+  position: absolute;
+  background-color: #8FBC8F;
+}
+
+.btnRight{
+  background-color: #8FBC8F;
+  position: absolute;
+  right: 0px;
+}
+
+/* VIDEO */
+
+.video{
+	margin: 20px;
+}
+
+/* IKONER */
+
+.ikon1{
+	font-size: 50px;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+
+.ikon1:hover{
+  animation-name: rotation-anim;
+}
+
+.ikon2{
+	font-size: 50px;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.ikon2:hover{
+  animation-name: scale-anim;
+}
+
+.ikon3{
+	font-size: 50px;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.ikon3:hover{
+  animation-name: colorChange-anim;
+}
+
+.triggerBox{
+  width: 100px;
+  height: 90px;
+  border: 5px solid #999;
+  background: #ddd;
+  margin: 0 auto;
+}
+
+.ikon4{
+  font-size: 50px;
+  transition: transform, 2s;
+}
+
+.triggerBox:hover .ikon4{
+  transform: translate(100px, 100px) rotate(100deg);
+}
+
+/* Animationer */
+
+@keyframes rotation-anim{
+  from{
+    transform:rotate(1deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes scale-anim{
+  50%{
+    font-size: 100px;
+  }
+  100%{
+    font-size: 50px;
+  }
+}
+
+@keyframes colorChange-anim{
+  20%{
+    color:pink;
+  }
+  60%{
+    color:blue;
+  }
+  80%{
+    color:green;
+  }
+}
+
+/* 3DKort */
+
+.flippBack{
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+.flipped{
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease-in-out;  
+}
+
+.cardImg{
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+.flipCard{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.flipCard > .cardFront{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  perspective: 600px;
+  backface-visibility: hidden;
+}
+
+.flipCard > .cardBack{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 10px;
+  border: solid 2px black;
+  perspective: 600px;
+  backface-visibility: hidden;
+  background-color: white;
+}
+
+@keyframes rotAnimation{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg)
+  }
+}
+
+/*.flipCard:hover > .cardFront{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+
+.flipCard:hover > .cardBack{
+    transform: perspective(600px) rotateY(0deg);
+}*/
+
+/* GUDIE */
+
+.guide{
+  background-color: #D2DAD7;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.highlight{
+  color: red;
+}
+
+p{
+  display:inline;
+}
+
+#bigBox:hover{
+  animation-play-state: running;
+}
